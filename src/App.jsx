@@ -104,10 +104,10 @@ function App() {
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
               🏆 Employee of the Month Generator
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Generate professional, ready-to-post Employee of the Month content with intelligent design suggestions and multi-platform export options.
             </p>
           </div>
@@ -115,11 +115,11 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           
           {/* Left Column - Input Form */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 lg:sticky lg:top-6 self-start">
             <EmployeeForm onFormSubmit={handleFormSubmit} />
             
             {/* Action Buttons */}
@@ -146,7 +146,7 @@ function App() {
           {/* Center Column - Preview */}
           <div className="lg:col-span-2">
             {isGenerating ? (
-              <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full">
+              <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 w-full">
                 <div className="animate-pulse">
                   <div className="flex items-center justify-center py-12">
                     <div className="text-center">
@@ -198,7 +198,7 @@ function App() {
 
         {/* Bottom Section - Export Options */}
         {generatedContent && !isGenerating && (
-          <div className="mt-8 flex justify-center">
+          <div className="mt-6 md:mt-8 flex justify-center">
             <ExportButtons 
               generatedContent={generatedContent}
               designSuggestion={activeDesignSuggestion}

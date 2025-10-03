@@ -87,11 +87,11 @@ const PreviewPanel = ({
   const captionText = generatedContent.platforms?.[currentCaptionPlatform] || generatedContent.platforms?.default || '';
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full">
-      <div className="flex items-center justify-between mb-6">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 w-full">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
         <h2 className="text-2xl font-bold text-gray-800">Content Preview</h2>
         
-        <div className="flex space-x-2">
+        <div className="flex flex-wrap gap-2">
           {platforms.map((platform) => (
             <button
               key={platform.id}
@@ -113,7 +113,7 @@ const PreviewPanel = ({
 
       {/* Design Suggestion */}
       {designSuggestion && (
-        <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+        <div className="mb-4 sm:mb-6 p-4 bg-gray-50 rounded-lg">
           <h3 className="font-semibold text-gray-800 mb-2">Design Suggestion</h3>
           <div className="flex items-center space-x-4 text-sm text-gray-600">
             <span><strong>Theme:</strong> {designSuggestion.displayName || designSuggestion.theme || designSuggestion.name}</span>
@@ -125,7 +125,7 @@ const PreviewPanel = ({
 
       {/* Content Preview */}
       <div className="space-y-4">
-        <div className="border-2 border-dashed border-gray-200 rounded-lg p-6">
+        <div className="border-2 border-dashed border-gray-200 rounded-lg p-4 sm:p-6">
           <h4 className="font-semibold text-gray-800 mb-3">
             {platforms.find(p => p.id === currentPlatform)?.name} Version
           </h4>
@@ -157,7 +157,7 @@ const PreviewPanel = ({
             minHeight: photoUrl ? '260px' : undefined
           }}>
             {photoUrl ? (
-              <div className="flex h-full">
+              <div className="flex flex-col md:flex-row h-full">
                 <div className={`relative flex flex-col justify-between flex-1 p-6 overflow-hidden ${getStyleClasses()}`}>
                   <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                   <div className="absolute -bottom-28 -right-10 w-56 h-56 bg-white/5 rounded-full blur-3xl"></div>
@@ -188,7 +188,7 @@ const PreviewPanel = ({
                     </div>
                   </div>
                 </div>
-                <div className="flex-1 relative min-h-full">
+                <div className="flex-1 relative min-h-[220px] md:min-h-full">
                   <img
                     src={photoUrl}
                     alt="Employee"

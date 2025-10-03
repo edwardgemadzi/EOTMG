@@ -40,12 +40,12 @@ const EmployeeForm = ({ onFormSubmit }) => {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 w-full max-w-xl">
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
         Employee Details
       </h2>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
         <div>
           <label htmlFor="employeeName" className="block text-sm font-medium text-gray-700 mb-1">
             Employee Name *
@@ -122,7 +122,7 @@ const EmployeeForm = ({ onFormSubmit }) => {
 
         <button
           type="submit"
-          className="w-full bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition duration-200 font-medium"
+          className="w-full bg-primary-600 text-white py-3 px-4 rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition duration-200 font-medium"
         >
           Generate Content
         </button>

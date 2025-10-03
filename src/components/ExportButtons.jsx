@@ -64,7 +64,7 @@ const ExportButtons = ({
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 w-full max-w-xl">
       <h3 className="text-xl font-bold text-gray-800 mb-4">Export Options</h3>
       
       <div className="space-y-3">
