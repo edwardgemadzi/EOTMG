@@ -1,12 +1,12 @@
 import { useState, useCallback } from 'react';
-import CopilotAgent from './CopilotAgent';
+import ContentGenerator from './ContentGenerator';
 
-// Custom hook for managing Copilot Agent operations
-export const useCopilotAgent = () => {
+// Custom hook for managing Content Generator operations
+export const useContentGenerator = () => {
   const [generatedContent, setGeneratedContent] = useState(null);
   const [designSuggestion, setDesignSuggestion] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
-  const [agent] = useState(() => new CopilotAgent());
+  const [agent] = useState(() => new ContentGenerator());
 
   const generateContent = useCallback(async (employeeData) => {
     setIsGenerating(true);
@@ -50,4 +50,4 @@ export const useCopilotAgent = () => {
   };
 };
 
-export default useCopilotAgent;
+export default useContentGenerator;

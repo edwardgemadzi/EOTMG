@@ -3,7 +3,7 @@ import EmployeeForm from './components/EmployeeForm';
 import PreviewPanel from './components/PreviewPanel';
 import ExportButtons from './components/ExportButtons';
 import ThemeSelector from './components/ThemeSelector';
-import { useCopilotAgent } from './copilot/useCopilotAgent';
+import { useContentGenerator } from './generator/useContentGenerator';
 import './App.css';
 
 // Available design themes
@@ -39,7 +39,7 @@ function App() {
     generateContent,
     clearContent,
     regenerateContent
-  } = useCopilotAgent();
+  } = useContentGenerator();
 
   const [selectedPlatform, setSelectedPlatform] = useState('linkedin');
   const [selectedCaptionPlatform, setSelectedCaptionPlatform] = useState('instagram');

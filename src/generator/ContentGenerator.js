@@ -1,7 +1,7 @@
-// Copilot Agent - Intelligent Content Generator
+// Content Generator - Intelligent Content Generator
 // This module handles the generation of celebratory text, design suggestions, and platform-specific formatting
 
-class CopilotAgent {
+class ContentGenerator {
   constructor() {
     this.celebratoryEmojis = ['🌟', '🎉', '👏', '🏆', '💫', '🎊', '🚀', '💪', '✨', '🙌'];
     this.designThemes = [
@@ -199,4 +199,4 @@ class CopilotAgent {
   }
 }
 
-export default CopilotAgent;
+export default ContentGenerator;

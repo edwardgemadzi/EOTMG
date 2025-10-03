@@ -4,9 +4,9 @@ A lightweight React web application that generates ready-to-post Employee of the
 
 ## ✨ Features
 
-- **Smart Content Generation**: AI-powered Copilot Agent creates celebratory text tailored to employee achievements
+- **Smart Content Generation**: Template-based Content Generator creates celebratory text tailored to employee achievements
 - **Design Intelligence**: Automatic design theme suggestions based on role and accomplishments
-- **Multi-Platform Support**: Optimized content for LinkedIn, Instagram, Twitter, and Email
+- **Multi-Platform Support**: Optimized content for LinkedIn, Instagram, Twitter, and Photo Captions
 - **Export Options**: Download as PNG, JPG, PDF certificate, or copy text to clipboard
 - **Professional Templates**: Beautiful, customizable design templates
 - **Instant Preview**: Real-time content preview with platform-specific formatting
@@ -33,7 +33,7 @@ A lightweight React web application that generates ready-to-post Employee of the
 - **Frontend**: React 18 + Vite
 - **Styling**: Tailwind CSS
 - **Export**: html2canvas + jsPDF
-- **AI Agent**: Custom JavaScript content generation engine
+- **Content Engine**: Custom JavaScript content generation templates
 
 ## 📁 Project Structure
 
@@ -45,9 +45,9 @@ employee-of-the-month-generator/
 │   │   ├── EmployeeForm.jsx
 │   │   ├── PreviewPanel.jsx
 │   │   └── ExportButtons.jsx
-│   ├── copilot/          # AI content generation
-│   │   ├── CopilotAgent.js
-│   │   └── useCopilotAgent.js
+│   ├── generator/         # Content generation engine
+│   │   ├── ContentGenerator.js
+│   │   └── useContentGenerator.js
 │   ├── templates/        # Design and content templates
 │   │   └── templateSystem.js
 │   ├── utils/           # Export utilities
@@ -62,7 +62,7 @@ employee-of-the-month-generator/
 ## 🎯 How It Works
 
 1. **Input Employee Details**: Fill out the form with employee name, role, achievements, and month
-2. **AI Content Generation**: The Copilot Agent analyzes the input and generates:
+2. **Content Generation**: The Content Generator analyzes the input and generates:
    - Celebratory post text
    - Platform-specific variations
    - Design theme suggestions
@@ -80,12 +80,12 @@ employee-of-the-month-generator/
 - **LinkedIn**: Professional tone with business hashtags
 - **Instagram**: Casual, engaging content with trending hashtags
 - **Twitter**: Concise format within character limits
-- **Email**: Formal template with subject line and signature
+- **Photo Caption**: Short, impactful text for photo overlays
 
 ## 🔧 Key Components
 
-### Copilot Agent (`src/copilot/CopilotAgent.js`)
-- Intelligent content generation engine
+### Content Generator (`src/generator/ContentGenerator.js`)
+- Template-based content generation engine
 - Platform-specific text optimization
 - Design theme recommendation algorithm
 - Achievement analysis and formatting
@@ -105,16 +105,16 @@ employee-of-the-month-generator/
 
 ### Adding New Templates
 1. Add design configuration to `templateSystem.js`
-2. Update the Copilot Agent's theme selection logic
+2. Update the Content Generator's theme selection logic
 3. Test across all export formats
 
 ### Adding New Platforms
 1. Add platform config to `platformTemplates`
-2. Create platform-specific content generation in `CopilotAgent.js`
+2. Create platform-specific content generation in `ContentGenerator.js`
 3. Update UI components to include the new platform
 
 ### Customizing Content Generation
-Modify the `CopilotAgent.js` class methods:
+Modify the `ContentGenerator.js` class methods:
 - `generateCelebratoryText()`: Update text templates
 - `generateDesignSuggestion()`: Modify theme selection logic
 - `_generatePlatformVariants()`: Add platform-specific formatting
